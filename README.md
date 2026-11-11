@@ -1,8 +1,6 @@
 # 输电线路金具检测
 
-作者：冯腾杰，华北电力大学（保定）。
-
-本项目包含五种检测模型的训练与测试，以及使用固定 YOLOv8s 权重的切片、高分辨率推理对照。数据来自华北电力大学课题组，不公开图像、标注及划分清单；复算论文指标需获得数据与固定划分的访问授权。
+本项目包含五种检测模型的训练与测试，以及使用固定 YOLOv8s 权重的切片、高分辨率推理对照。不公开图像、标注及划分清单；
 
 ## 文件用途
 
@@ -12,7 +10,7 @@
 | `scripts_e8/` | E8 整图 1280 补充实验代码，保持服务器目录名 |
 | `configs/` | 五模型真实训练参数存档；不是直接加载的配置入口 |
 | `models/pretrained/` | 官方初始化权重的下载清单、校验工具；不含权重本体 |
-| `results/` | 五模型测试表、分开的验证/测试推理对照表 |
+| `results/` | 五模型测试表、验证/测试推理对照表 |
 | `weights-manifest.json` | Release 中五个训练后权重的文件名、大小和 SHA-256 |
 
 下载本仓库即可获得代码和记录。训练后权重另从本仓库 Releases 获取 `trained-weights.zip`，解压到项目根目录后得到 `weights/*.pt` 或 `weights/*.pth`。官方初始化权重按 `models/pretrained/README.md` 准备。E7、E8 复用 E3 权重，没有独立训练权重。
@@ -37,7 +35,7 @@
 
 运行命令前，从项目根目录准备正式数据目录 `fittings_dataset/`。YOLO 与 RT-DETR 读取 `data.yaml`，Torchvision 读取 `annotations/instances_*.json`。调整 `data.yaml` 的数据根路径至本机目录。获准访问原始 XML、图像与固定划分时，可用 `scripts/prepare_fittings.py --help` 查看转换方式。论文正式划分为训练 1092 张、验证 234 张、测试 234 张。
 
-COCO 初始化权重的下载地址和校验值见 `models/pretrained/pretrained_manifest.json`。训练后权重按课题组许可提供，取得 `trained-weights.zip` 后解压到仓库根目录，检查 `weights/` 下文件名与清单一致。
+COCO 初始化权重的下载地址和校验值见 `models/pretrained/pretrained_manifest.json`。训练后权重已提供，取得 `trained-weights.zip` 后解压到仓库根目录，检查 `weights/` 下文件名与清单一致。
 
 ## 复现训练与测试
 
@@ -88,4 +86,4 @@ python scripts_e8/run_sliced_baseline.py --data fittings_dataset \
   --whole-only --output runs/E8_test
 ```
 
-E7 同时输出整图 640 与整图加切片，E8 输出整图 1280。两者的耗时来自同一设备的不同运行批次。验证结果见 `results/inference_comparison_val.csv`，测试结果见 `results/inference_comparison_test.csv`；指标定义及来源见 `results/README.md`。
+E7 同时输出整图 640 与整图加切片，E8 输出整图 1280。两者的耗时来自同一设备的不同运行批次。验证和测试结果见 `results/inference_comparison.csv`。
