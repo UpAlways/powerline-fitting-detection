@@ -1,0 +1,37 @@
+[
+  {
+    "experiment": "E1",
+    "model": "Faster R-CNN",
+    "path": "weights/E1_fasterrcnn_640_best.pth",
+    "bytes": 166076751,
+    "sha256": "308d1846ed9693789e1df0296aea44a6546f93c3de808f98564a94cea0681829"
+  },
+  {
+    "experiment": "E2",
+    "model": "RetinaNet",
+    "path": "weights/E2_retinanet_640_best.pth",
+    "bytes": 130537161,
+    "sha256": "37f73f00c4dcc970fecd46ad2014b5f4a74abe6c85a4bb1c85b408c4e678166e"
+  },
+  {
+    "experiment": "E3",
+    "model": "YOLOv8s",
+    "path": "weights/E3_yolov8s_640_best.pt",
+    "bytes": 22510499,
+    "sha256": "8231f1a94a81829da7bb9635d4cdaa3e7261853feca3b06e27162bfb0101b774"
+  },
+  {
+    "experiment": "E4",
+    "model": "YOLO11s",
+    "path": "weights/E4_yolo11s_640_best.pt",
+    "bytes": 19170067,
+    "sha256": "d0a41b2e5cbf26946e4a7ebe747d0b62aa3166f9cedcf17f56c37f566a09b253"
+  },
+  {
+    "experiment": "E5",
+    "model": "RT-DETR-L",
+    "path": "weights/E5_rtdetr_l_640_best.pt",
+    "bytes": 66291446,
+    "sha256": "4c08731b1ec703e19b44a8b4012770fd7d3a683650309ee7a09241036e6dec1c"
+  }
+]
