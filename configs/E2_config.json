@@ -1,0 +1,19 @@
+{
+  "data": "fittings_dataset",
+  "weights": "models/pretrained/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+  "family": "retinanet",
+  "output": "runs/E2_retinanet_640",
+  "checkpoint": null,
+  "split": "val",
+  "epochs": 60,
+  "imgsz": 640,
+  "batch": 2,
+  "workers": 0,
+  "device": "cuda:0",
+  "optimizer": "SGD",
+  "initial_lr": 0.005,
+  "seed": 42,
+  "accumulation_steps": 4,
+  "torch": "2.2.0",
+  "torchvision": "0.17.2+c1d70fe"
+}

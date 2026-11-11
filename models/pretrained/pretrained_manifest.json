@@ -1,0 +1,57 @@
+{
+  "dataset": "COCO detection",
+  "weights": [
+    {
+      "experiment": "E1",
+      "model": "Faster R-CNN ResNet50-FPN",
+      "file": "fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+      "source": "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+      "bytes": 167502836,
+      "sha256": "258fb6c638b15964ddcdd1ae0748c5eef1be9e732750120cc857feed3faac384",
+      "sha256_prefix": "258fb6c6",
+      "download_status": "ready",
+      "validation": "SHA-256 matched the official filename prefix"
+    },
+    {
+      "experiment": "E2",
+      "model": "RetinaNet ResNet50-FPN",
+      "file": "retinanet_resnet50_fpn_coco-eeacb38b.pth",
+      "source": "https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+      "bytes": 136595076,
+      "sha256": "eeacb38b7cec8cf93c57867e05eaab621047f19b0d2ec5accaa405f690da15b7",
+      "sha256_prefix": "eeacb38b",
+      "download_status": "ready",
+      "validation": "File size and official SHA-256 prefix matched; full local SHA-256 recorded"
+    },
+    {
+      "experiment": "E3",
+      "model": "YOLOv8s",
+      "file": "yolov8s.pt",
+      "source": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s.pt",
+      "bytes": 22588772,
+      "sha256": "1f47a78bf100391c2a140b7ac73a1caae18c32779be7d310658112f7ac9aa78a",
+      "download_status": "ready",
+      "validation": "Reused the locally recorded official asset; SHA-256 matched the prior record and ZIP CRC passed"
+    },
+    {
+      "experiment": "E4",
+      "model": "YOLO11s",
+      "file": "yolo11s.pt",
+      "source": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt",
+      "bytes": 19313732,
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "download_status": "ready",
+      "validation": "Official HTTPS release asset; ZIP CRC passed and local SHA-256 recorded"
+    },
+    {
+      "experiment": "E5",
+      "model": "RT-DETR-L",
+      "file": "rtdetr-l.pt",
+      "source": "https://github.com/ultralytics/assets/releases/download/v8.3.0/rtdetr-l.pt",
+      "bytes": 66511432,
+      "sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+      "download_status": "ready",
+      "validation": "Official HTTPS release asset; ZIP CRC passed and local SHA-256 recorded"
+    }
+  ]
+}
